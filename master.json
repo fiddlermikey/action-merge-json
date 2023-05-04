@@ -1,0 +1,38 @@
+{
+  "RFDER": {
+    "Name": "RFDER",
+    "ShortName": "RFDER",
+    "Capability": "RFDER",
+    "ServerRequired": true,
+    "BlueprintAllowed": false,
+    "CustomAliasAllowed": "Forbidden",
+    "PowerShell": false,
+    "PrivateKeyAllowed": "Optional",
+    "Properties": [
+      {
+        "Name": "LinuxFilePermissionsOnStoreCreation",
+        "DisplayName": "Linux File Permissions on Store Creation",
+        "Required": false,
+        "DependsOn": "",
+        "Type": "String",
+        "DefaultValue": ""
+      },
+      {
+        "Name": "LinuxFileOwnerOnStoreCreation",
+        "DisplayName": "Linux File Owner on Store Creation",
+        "Required": false,
+        "DependsOn": "",
+        "Type": "String",
+        "DefaultValue": ""
+      },
+      {
+        "Name": "SeparatePrivateKeyFilePath",
+        "DisplayName": "Separate Private Key File Location",
+        "Required": false,
+        "DependsOn": "",
+        "Type": "String",
+        "DefaultValue": ""
+      }
+    ]
+  }
+}

@@ -1,0 +1,25 @@
+name: 'Merge JSON'
+description: 'Merge JSON data from one file into another'
+inputs:
+  input-file:  # new json data
+    description: 'New JSON data file'
+    required: true
+    default: 'integration-manifest.json'
+  library-file:  # master file
+    description: 'File to receive merged JSON data'
+    required: true
+    default: 'master.json'
+  new-json-path:  # json path to insert
+    description: 'JSON path to be copied'
+    required: false
+    default: ''
+  old-json-path:  # json path to be merged with
+    description: 'JSON path to be merged into'
+    required: false
+    default: ''
+outputs:
+  time: 
+    description: 'The time we greeted you'
+runs:
+  using: 'node16'
+  main: 'dist/index.js'
