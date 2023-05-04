@@ -30,11 +30,13 @@ For debugging purposes
 ## Example usage
 
 ```yaml
-uses: actions/action-merge-json@v1.0
-with:
-	input-file: integ-store-types.json
-	library-file: ./json-temp/store-types/store-types.json
-	new-json-path: 'path.to.object'
-	old-json-path: 'path.to.insert.into'
+  call-merge-json:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: fiddlermikey/action-merge-json@v1.0.0
+        with:
+          new-json-path: 'about.orchestrator.store_types'
+          input-file: integration-manifest.json
+          library-file: json1.json
 
 ```
