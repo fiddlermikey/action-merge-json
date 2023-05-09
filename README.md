@@ -35,8 +35,8 @@ For debugging purposes
     steps:
       - uses: fiddlermikey/action-merge-json@v1.0.0
         with:
-          new-json-path: 'about.orchestrator.store_types'
-          input-file: integration-manifest.json
-          library-file: json1.json
+          new-json-path: 'person.firstname'
+          input-file: json1.json
+          library-file: json2.json
 
 ```
