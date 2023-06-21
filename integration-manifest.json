@@ -1,69 +1,104 @@
 {
   "$schema": "https://keyfactor.github.io/integration-manifest-schema.json",
-  "name": "Remote File",
+  "name": "MOST",
+  "status": "production",
+  "integration_type": "orchestrator",
+  "description": "MOST Testing",
   "about": {
     "orchestrator": {
       "store_types": {
-        "RFPEM": {
-          "Name": "RFPEM",
-          "ShortName": "RFPEM",
-          "Capability": "RFPEM",
-          "ServerRequired": true,
-          "BlueprintAllowed": false,
-          "CustomAliasAllowed": "Forbidden",
-          "PowerShell": false,
-          "PrivateKeyAllowed": "Optional",
-          "Properties": [
-            {
-              "Name": "LinuxFilePermissionsOnStoreCreation",
-              "DisplayName": "Linux File Permissions on Store Creation",
-              "Required": false,
-              "DependsOn": "",
-              "Type": "String",
-              "DefaultValue": ""
+        "store_types": [
+          {
+            "Name": "MyOrchestratorStoreType",
+            "ShortName": "MOST",
+            "Capability": "MOST",
+            "LocalStore": false,
+            "SupportedOperations": {
+              "Add": false,
+              "Create": false,
+              "Discovery": true,
+              "Enrollment": false,
+              "Remove": false
             },
-            {
-              "Name": "LinuxFileOwnerOnStoreCreation",
-              "DisplayName": "Linux File Owner on Store Creation",
-              "Required": false,
-              "DependsOn": "",
-              "Type": "String",
-              "DefaultValue": ""
+            "Properties": [
+              {
+                "Name": "CustomField1",
+                "DisplayName": "CustomField1",
+                "Type": "String",
+                "DependsOn": "",
+                "DefaultValue": "default",
+                "Required": true
+              },
+              {
+                "Name": "CustomField2",
+                "DisplayName": "CustomField2",
+                "Type": "String",
+                "DependsOn": "",
+                "DefaultValue": null,
+                "Required": true
+              }
+            ],
+            "EntryParameters": [],
+            "PasswordOptions": {
+              "EntrySupported": false,
+              "StoreRequired": false,
+              "Style": "Default"
             },
-            {
-              "Name": "IsTrustStore",
-              "DisplayName": "Trust Store",
-              "Required": false,
-              "DependsOn": "",
-              "Type": "Bool",
-              "DefaultValue": false
+            "StorePathType": "",
+            "StorePathValue": "",
+            "PrivateKeyAllowed": "Forbidden",
+            "JobProperties": [],
+            "ServerRequired": true,
+            "PowerShell": false,
+            "BlueprintAllowed": false,
+            "CustomAliasAllowed": "Forbidden"
+          },
+          {
+            "Name": "MyOrchestratorStoreType2",
+            "ShortName": "MOST2",
+            "Capability": "MOST2",
+            "LocalStore": false,
+            "SupportedOperations": {
+              "Add": false,
+              "Create": false,
+              "Discovery": true,
+              "Enrollment": false,
+              "Remove": false
             },
-            {
-              "Name": "IncludesChain",
-              "DisplayName": "Store Includes Chain",
-              "Required": false,
-              "DependsOn": "",
-              "Type": "Bool",
-              "DefaultValue": false
+            "Properties": [
+              {
+                "Name": "CustomField1",
+                "DisplayName": "CustomField1",
+                "Type": "String",
+                "DependsOn": "",
+                "DefaultValue": "default",
+                "Required": true
+              },
+              {
+                "Name": "CustomField2",
+                "DisplayName": "CustomField2",
+                "Type": "String",
+                "DependsOn": "",
+                "DefaultValue": null,
+                "Required": true
+              }
+            ],
+            "EntryParameters": [],
+            "PasswordOptions": {
+              "EntrySupported": false,
+              "StoreRequired": false,
+              "Style": "Default"
             },
-            {
-              "Name": "SeparatePrivateKeyFilePath",
-              "DisplayName": "Separate Private Key File Location",
-              "Required": false,
-              "DependsOn": "",
-              "Type": "String",
-              "DefaultValue": ""
-            },
-            {
-              "Name": "IsRSAPrivateKey",
-              "DisplayName": "Is RSA Private Key",
-              "Required": false,
-              "DependsOn": "",
-              "Type": "Bool",
-              "DefaultValue": false
-            }
-          ]
-        }
+            "StorePathType": "",
+            "StorePathValue": "",
+            "PrivateKeyAllowed": "Forbidden",
+            "JobProperties": [],
+            "ServerRequired": true,
+            "PowerShell": false,
+            "BlueprintAllowed": false,
+            "CustomAliasAllowed": "Forbidden"
+          }
+        ]
       }
     }
   }
